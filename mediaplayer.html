@@ -1,0 +1,57 @@
+<!-- /.play-box -->
+
+
+<div class="my-player">
+
+	<div class="current-track">
+    	<span id="currentTrackTitle">なにかんがえてるの？</span>
+	</div>
+
+	<div id="playingWaves">
+    	<img id="wavesIcon" src="staticwaves.gif" alt="song playing">
+	</div>
+
+	<div class="audio-player">
+
+		<audio id="audio" preload="metadata"></audio>
+
+	<div class="progress-bar">
+  	<progress id="songProgress" min="0" max="100" value="0"></progress>
+	</div>
+
+	<div class="controls">
+
+	<button id="playPauseBtn">
+    	<img id="playPauseIcon" src="playicon.png" alt="Play">
+	</button>
+
+	<span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+
+	<div class="slider_container">
+	<input type="range" id="volumeSlider" class="volume_slider" min="0" max="1" step="0.01" value="1">
+	</div>
+
+	</div> <!-- end of controls -->
+	</div> <!-- end of audio-player -->
+
+ <div class="playlist">
+     <ul id="playlist">
+       <li data-title="Catch You Catch Me" data-src="#.mp3">Catch You Catch Me</li>
+       <li data-title="Tobira Wo Akete" data-src="#.mp3">Tobira Wo Akete</li>
+       <li data-title="Honey" data-src="#.mp3">Honey</li>
+     </ul>
+
+	</div> <!-- playlist -->
+
+</div> <!-- end of my-player -->
+
+
+<!-- This text なにかんがえてるの？ is what will scroll across before a song is clicked to play, change to whatever you would like -->
+<!-- Add name of files to the list, then change the data-title to match the title on the right -->
+<!-- The data-title scrolls across the top when the song is playing, the other title text always shows on the playlist -->
+
+<!-- You can find play and pause icons for free online, or use another image, or make them yourself -->
+<!-- staticwaves.gif is what shows when no song is playing -->
+<!-- playingwaves.gif is what shows when a song is playing -->
+
+<!-- Don't change the file names for the images, simply name your files the same way unless you want to edit the js file too -->
