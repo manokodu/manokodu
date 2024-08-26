@@ -1,0 +1,244 @@
+<!-- This only applies to the audiobox players design, if you change the color scheme for this the controls will not match -->
+<!-- If you want the audiobox players to be different then you need to create more styling classes and alter the js file -->
+<!-- I used rgba to allow opacity changes, but if you don't want transparency you can just use hex codes -->
+
+.audio-box {
+width: 375px;
+height: 30px;
+background: rgba(252, 233, 139, 0.5);
+font-family: Courier New;
+color: #9B4F22;
+border: 1px solid rgba(155, 79, 34, 0.7);
+font-size: 10px;
+overflow: hidden;
+display: grid;
+grid-template-rows: 6px auto;
+margin-top: 15px;
+}
+
+<!-- All code below applies to the controls and all styling for the mediaplayer -->
+<!-- Adjust anything you want here, including background images, colors, fonts, size of content etc -->
+	
+.my-player {
+width: 375px;
+height: 350px;
+border: 2px solid rgba(155, 79, 34, 0.7);
+background-image: url('cardcaptor.jpg');
+background-position: center !important;
+margin-left: auto;
+margin-right: auto;
+}
+
+.audio-player {
+width: 375px;
+height: 30px;
+background: rgba(252, 233, 139, 0.5);
+font-family: Courier New;
+color: #9B4F22;
+border-top: 1px solid rgba(155, 79, 34, 0.7);
+border-bottom: 1px solid rgba(155, 79, 34, 0.7);
+font-size: 10px;
+overflow: hidden;
+display: grid;
+grid-template-rows: 6px auto;
+margin-top: 30px;
+}
+
+.current-track {
+width: 90%;
+text-align: center;
+font-family: Courier New;
+color: #9B4F22;
+margin: 15px;
+font-size: 16px;
+white-space: nowrap;
+overflow: hidden;
+box-sizing: border-box; 
+}
+
+.current-track span {
+display: inline-block;
+padding-left: 100%;
+animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#playingWaves {
+padding: 0px;
+margin-top: 30px;
+margin-left: 40px;
+border: none;
+background: none;   
+}
+
+#playingWaves img {
+opacity: 1;
+}
+
+progress {
+width: 375px;
+margin-top: 0px;
+background-color: rgba(252, 227, 246, 0.7);
+border-bottom: 1px solid rgba(155, 79, 34, 0.7);
+}
+
+progress::-webkit-progress-bar {
+background-color: rgba(252, 227, 246, 0.7);
+}
+
+progress::-webkit-progress-value {
+background-color: rgba(234, 25, 69, 0.7);
+}
+
+progress::-moz-progress-bar {
+background-color: rgba(234, 25, 69, 0.7);
+}
+
+.controls {
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-top: 2px;
+}
+
+#playPauseBtn {
+padding: 0;
+border: none;
+background: none;
+cursor: pointer;
+display: flex;    
+align-items: center;
+}
+
+#playPauseBtn img {
+width: 25px;
+height: 25px;
+}
+
+#currentTime, #totalTime {
+font-size: 11px;
+color: #9b4f22;
+margin: 0 10px;
+}
+
+.slider_container {
+width: 45%;
+max-width: 115px;
+display: flex;
+justify-content: right;
+align-items: right;
+}
+
+input[type='range'] {
+overflow: hidden;
+width: 115px;
+-webkit-appearance: none;
+background-color: rgba(182, 217, 213, 0.7);
+border-radius: 1px;
+border: 1px solid rgba(252, 227, 246, 0.7);
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+height: 10px;
+-webkit-appearance: none;
+color: #ffffff;
+margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+width: 10px;
+-webkit-appearance: none;
+height: 10px;
+cursor: ew-resize;
+background: rgba(252, 227, 246, 0.7);
+box-shadow: -80px 0 0 80px rgba(182, 217, 213, 1);
+border-radius: 1px; /* Added border radius */
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+background: rgba(252, 227, 246, 1);
+}
+
+input[type='range']:active::-webkit-slider-thumb {
+background: rgba(252, 227, 246, 1);
+}
+
+.playlist {
+width: 375px;
+height: 135px;
+overflow-y: auto;
+overflow-x: hidden;
+background-color: transparent;
+}
+
+.playlist ul {
+background: none;
+border-radius: 1px;
+padding: 0px;
+height: 16px;
+margin: 0px;
+list-style-type: none;
+}
+
+.playlist li {
+background: rgba(252, 227, 246, 0.5);
+border-radius: 1px;
+padding: 4px;
+width: 375px;
+height: 16px;
+margin: 0px;
+color: rgba(155, 79, 34, 0.8);
+font-family: Courier New;
+font-size: 12px;
+letter-spacing: 2px;
+text-decoration: none;
+font-weight: bold;
+vertical-align: middle;
+text-align: left !important;
+}
+
+.playlist li:hover {
+background: rgba(182, 217, 213, 0.5);
+border-radius: 1px;
+padding: 4px;
+width: 375px;
+height: 16px;
+margin: 0px;
+color: rgba(155, 79, 34, 0.8);
+font-family: Courier New;
+font-size: 12px;
+letter-spacing: 2px;
+text-decoration: none;
+font-weight: bold;
+vertical-align: middle;
+text-align: left !important;
+}
+
+.playlist::-webkit-scrollbar {
+width: 1px;
+}
+ 
+.playlist::-webkit-scrollbar-track {
+background-color: rgba(252, 227, 246, 0.5);
+}
+
+.playlist::-webkit-scrollbar-button {
+background-color: rgba(252, 227, 246, 0.5);
+}
+ 
+.playlist::-webkit-scrollbar-thumb {
+background-color: rgba(252, 227, 246, 0.5);
+border-radius: 0px; 
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+background: rgba(182, 217, 213, 0.5);
+}
