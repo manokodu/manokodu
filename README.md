@@ -2,7 +2,7 @@
 - 👀 I’m interested in dance, music, sports, web dev, and game dev.
 - 🌱 I’m currently learning how to make a video game now that I barely understand basic programming languages.
 - 💞️ I’m looking to collaborate on nothing in particular but if you are creative you can mess with my code here.
-- 📫 Reach me by contacting me on my website or at admin@manokodu.net 
+- 📫 Reach me at admin@manokodu.online
 - ⚡ Fun fact: I can see into your soul.
 
 <!---
